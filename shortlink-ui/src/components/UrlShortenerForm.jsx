@@ -23,7 +23,7 @@ export default function UrlShortenerForm() {
   };
 
   return (
-    <div className="w-100 flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="w-100 flex justify-center items-center h-full mt-90">
       <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
         <form onSubmit={handleSubmit} className="flex flex-col">
           <label className="mb-2 font-medium text-gray-700">
