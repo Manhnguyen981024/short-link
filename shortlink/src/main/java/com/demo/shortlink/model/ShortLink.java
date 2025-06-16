@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "short_urls")
@@ -31,4 +32,7 @@ public class ShortLink {
 
     @Column(nullable = false)
     private Long hitCount;
+
+    @OneToMany(mappedBy = "shortLink", cascade = CascadeType.ALL)
+    private List<LinkAccessLog> accessLogs;
 }
